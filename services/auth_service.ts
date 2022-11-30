@@ -1,11 +1,11 @@
-import { FirebaseError } from "firebase/app";
+import { auth } from "./firebase_service";
+import { createUserJSON } from "./user_service";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { FirebaseError } from "firebase/app";
 import { UserModel } from "../models/user_model";
-import { auth } from "./firebase_service";
-import { createUserJSON } from "./user_service";
 
 export async function SignIn(email: string, password: string) {
   let currentUser: UserModel | null = null;
