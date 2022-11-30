@@ -1,6 +1,6 @@
+import dotenv from "dotenv";
 import { FirebaseApp, initializeApp } from "firebase/app";
 import { getAuth, Auth } from "firebase/auth";
-import dotenv from "dotenv";
 
 dotenv.config(); //envを使用するために宣言
 export let auth: Auth;
