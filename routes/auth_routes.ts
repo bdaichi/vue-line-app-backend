@@ -7,7 +7,6 @@ app.post("/signIn", async (req, res) => {
 });
 
 app.post("/signUp", async (req, res) => {
-  //TODO:newUserの変数名を変更
   const signUpData = await SignUp(req.body.email, req.body.password);
   res.status(201).send(signUpData);
 });
